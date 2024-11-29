@@ -6,22 +6,16 @@ object Account {
       cnt=cnt+1
       return cnt
   }
-//   def checkaccount(arr:Array[Account],acno:Int):Int=
-//   {
-//       for(i<-0 to (arr.length-1))
-//       {
-//           if(arr(i).getAccno()==acno)
-//           return 1 
-//       }
-//       return -1
-//   }
-def checkaccount(arr:Array[Account], acno:Int):Int = {
-  for(i <- arr.indices) {
-    if(arr(i).getAccno() == acno)
-      return i // Return the index instead of 1
+  def checkaccount(arr:Array[Account],acno:Int):Int=
+  {
+      for(i<-0 to (arr.length-1))
+      {
+          if(arr(i).getAccno()==acno)
+          return i
+      }
+      return -1
   }
-  return -1 // Return -1 if the account is not found
-}
+
 
 }
 class Account
